@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.html,body{
+    margin:0;
+    padding:0;
+    height: 100vh;
+}
+h1{
+    margin:120px 0;
+    font-size: 28pt;
+
+}
+h2,p{
+    margin: 0;
+
+}
+*{
+    font-family: "BMJUA";
+    color: #FFFFFF;
+}
+#bgVideo{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    
+}
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* flex: 1; */
+    height: 100%;
+    justify-content: start;
+    align-items: center;
+}
+.timerWrapper{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    font-size: 1.8rem;
+}
+.timerBlock{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
