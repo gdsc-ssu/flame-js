@@ -48,3 +48,6 @@
    
 
 +확장성을 조금 고려해서 title(제목?)을 JS에서 동적으로 만들고, d-day를 계산하는 함수도 date 객체를 인자로 받아 남은 날짜를 동적으로 생성하도록 만들었습니다.
+
+완성된 화면
+![image](https://user-images.githubusercontent.com/70627979/143289791-7c43fd47-249f-445d-a2ec-e4bb4f5824a2.png)
