@@ -1,10 +1,10 @@
-const newYears = '25 dec 2021';
+const christmas = '25 dec 2021';
 
 function countdown() {
-   const newYearsDate = new Date(newYears);
+   const christmasDate = new Date(christmas);
    const currentDate = new Date();
 
-   const totalSeconds = (newYearsDate - currentDate) / 1000;
+   const totalSeconds = (christmasDate - currentDate) / 1000;
    
    const days = Math.floor(totalSeconds / 3600 / 24);
    const months = Math.floor(days/30-1);
