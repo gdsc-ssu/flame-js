@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <h2 class="title">Question Text</h2>
+        <div class="content" id="quiz-content">
+            <ul>
+                <li>
+                    <input type="radio" id="a" name="answer" />
+                    <label for="a" id="a_text">A-Text</label>
+                </li>
+                <li>
+                    <input type="radio" id="b" name="answer" />
+                    <label for="b" id="b_text">B-Text</label>
+                </li>
+                <li>
+                    <input type="radio" id="c" name="answer" />
+                    <label for="c" id="c_text">C-Text</label>
+                </li>
+                <li>
+                    <input type="radio" id="d" name="answer" />
+                    <label for="d" id="d_text">D-Text</label>
+                </li>
+            </ul>
+            
+        </div>
+
+        <div class="no-display content" id="result">
+            <span id="score"></span>
+        </div>
+    </div>
+    <div id="submit" onclick="submit()">Submit</div>
+    
+
+    <script src="./script.js" />
+</body>
+</html>
