@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Awsome Todo Apps</title>
+</head>
+<body>
+    <section class="wrapper">
+        <header class="todo-header">ㅌㄷ ㄹㅅㅌ</header>
+        <section class="todo-list">
+            <div class="todo-input todo-box">
+                <input type="checkbox" class="checkbox" />
+                <input id="masterText" onKeypress="javascript:if(event.keyCode==13) {addTodo()}"type= "text" class="text"/>
+            </div>
+            <div class="todo-body" id="boards">
+                <div class="todo-element todo-box">
+                    <input type="checkbox" class="checkbox"/>
+                    <input type="text" class="text"/>
+                    <button>x</button>
+                </div>
+                <div class="todo-element todo-box">
+                    <input type="checkbox" class="checkbox"/>
+                    <input type="text" class="text"/>
+                    <button>x</button>
+                </div>
+            </div>
+            <footer></footer>
+        </section>
+    </section>
+</body>
+</html>
