@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  background-color: slategray;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  height: 3rem;
+}
+
+.header > h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.header > button {
+  width: 6rem;
+  height: 2rem;
+  font-weight: bold;
+}
+
+.main {
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 2rem;
+  width: 100%;
+  min-height: 90vh;
+}
+
+.memo-list {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 2rem 0;
+}
+
+.memo-wrapper {
+  width: 30%;
+  height: 30vh;
+  margin: 2rem 1.5%;
+  float: left;
+}
+
+.memo-list {
+  list-style: none;
+}
+
+.memo-header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  background-color: steelblue;
+  border-radius: 10px 10px 0 0;
+}
+
+.memo-header > button {
+  margin-right: 0.4rem;
+}
+
+.memo-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 5px 5px;
+}
+
+.memo-content > .memo-content__textarea {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 8px 8px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  resize: none;
+}
+
+.memo-content > .memo-content__markdown {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 8px 8px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: azure;
+  overflow-y: scroll;
+}
+
+button {
+  cursor: pointer;
+  background-color: lightsteelblue;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
