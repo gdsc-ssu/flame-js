@@ -14,20 +14,25 @@ const saveData = (key, value) => {
 const todoList = callData('todos') || [];
 
 // li 요소 만들기
-const makeTodo = (text) => {
+const makeTodo = (text, finished, id) => {
   const $item = document.createElement('li');
   $item.className = 'todo-list__item';
+  $item.id = `${id}`;
+
+  if (finished) $item.classList.add('finished');
+
   $item.innerHTML = `
   <div class="check-todo"></div>
   <span class="todo-text">${text}</span>
   `;
+
   $item.addEventListener('click', checkTodo);
 
   return $item;
 };
 
 // todo list 그리기
-const drawTodoList = (arr, isFirst) => {
+const drawTodoList = (todosArr, isFirst) => {
   let $todoList;
   if (isFirst) {
     $todoList = document.createElement('ul');
@@ -36,40 +41,53 @@ const drawTodoList = (arr, isFirst) => {
     $todoList = document.querySelector('.todo-list');
   }
 
-  console.log(isFirst, $todoList);
+  // console.log(isFirst, $todoList);
 
-  arr.forEach((itemText) => {
-    const $li = makeTodo(itemText);
+  todosArr.forEach(({ text, finished, id }) => {
+    const $li = makeTodo(text, finished, id);
     $todoList.appendChild($li);
   });
 
   if (isFirst) {
     let $previousTodoList = document.querySelector('.todo-list');
-    console.log($previousTodoList);
+    // console.log($previousTodoList);
     $main.replaceChild($todoList, $previousTodoList);
   }
 };
 
 // todo 추가
+let SAFE_ID_NUM = 0;
 const addTodo = (e) => {
   if (e.key !== 'Enter' || e.target.value === '') {
     return;
   }
 
-  todoList.push(e.target.value);
+  SAFE_ID_NUM += 1;
+  const newId = `${Date.now()}` + `${SAFE_ID_NUM}`; // 고유한 Id 만들기
+
+  const newItem = { text: e.target.value, finished: false, id: newId };
+
+  todoList.push(newItem);
   saveData('todos', todoList);
 
-  drawTodoList([e.target.value], false);
+  drawTodoList([newItem], false);
+
   $todoInput.value = '';
 };
 
+// 리스트 확인
 const checkTodo = (e) => {
-  if (!e.target.classList.contains('check-todo')) {
-    return;
-  }
+  e.currentTarget.classList.toggle('finished');
 
-  e.target.classList.toggle('checked');
-  e.target.nextElementSibling.classList.toggle('finished');
+  const targetId = e.currentTarget.id;
+
+  todoList.forEach((todo) => {
+    if (todo.id === targetId) {
+      todo.finished = true;
+    }
+  });
+
+  saveData('todos', todoList);
 };
 
 drawTodoList(todoList, true); // 처음에 그리기
