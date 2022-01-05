@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레시피 앱</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="header-wrapper">
+        <div class="header-search">
+          <input type="text" class="search-input" />
+          <button class="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="header-favorite">
+          <h2 class="favorite-title">Favorite Meals</h2>
+          <div class="favorite-wrapper">
+            <ul class="favorite-list">
+              <!--  -->
+              <li class="list-item">
+                <img src="#" alt="" class="item-img" />
+                <span class="item-name">chicken</span>
+              </li>
+              <!--  -->
+            </ul>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <!--  -->
+        <section class="card">
+          <div class="card-label">Random Receipe</div>
+          <img src="#" alt="" class="card-image" />
+          <div class="card-info">
+            <span class="card-title">chicken</span>
+            <button class="fav-button">
+              <i class="like fa fa-heart"></i
+              ><i class="unlike fa fa-heart-o"></i>
+            </button>
+          </div>
+        </section>
+        <!--  -->
+      </main>
+    </div>
+  </body>
+</html>
