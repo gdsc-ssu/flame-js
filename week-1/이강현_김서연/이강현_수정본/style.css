@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://www.wallpapertip.com/wmimgs/35-355517_christmas-wallpaper-christmas-wallpaper-hd-desktop.jpg');
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  width: 80%;
+}
+
+#title {
+  text-align: center;
+  color: snow;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+#counterWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.counterBox {
+  width: 20%;
+}
+
+.counterNumber {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: snow;
+}
+
+.counterUnit {
+  text-align: center;
+  color: tan;
+}

@@ -1,0 +1,33 @@
+body {
+  background-image: url('https://www.wallpapertip.com/wmimgs/35-355517_christmas-wallpaper-christmas-wallpaper-hd-desktop.jpg');
+  width: 100vw;
+  height: 100vh;
+}
+
+#title {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+}
+
+#count {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 20%;
+}
+
+.number {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.text {
+  text-align: center;
+  color: tan;
+}
