@@ -24,12 +24,12 @@ async function getSearchMovies(text) {
 
 function makeCard(imgPath, title, rate, overview) {
   return `
-  <div class="movie">
+  <div class="movie-card">
     <img class="movie-img" src="${imgPath}" alt="" />
     <div class="movie-info">
       <p class="info-title">${title}</p>
       <div class="rate-box">
-        <p class="rate">${rate}</p>
+        <p class="rate-box__number">${rate}</p>
       </div>
     </div>
     <div class="movie-overview">
@@ -42,7 +42,7 @@ function makeCard(imgPath, title, rate, overview) {
 
 function showMovies(dataList) {
   const $wrapper = document.createElement('div');
-  $wrapper.className = 'container';
+  $wrapper.className = 'movies-container';
 
   dataList.results.forEach((data) => {
     const imgPath = IMGPATH + data.poster_path;
