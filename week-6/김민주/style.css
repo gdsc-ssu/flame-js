@@ -32,8 +32,8 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: rebeccapurple;
-    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.295);
+    border-radius: 16px;
     align-items: start;
     flex:4;
     padding:64px;
@@ -62,6 +62,7 @@ body{
     height: 100%;
     align-items: flex-start;
     flex-direction: column;
+    padding-left: 24px;
     flex:3
 }
 
@@ -72,4 +73,20 @@ body{
 }
 .info-introduce{
     font-size: 15pt;
+}
+.info-value{
+    width: 100%;
+    margin-bottom: 16px;
+}
+.info-value>ul{
+    margin: 0;
+    padding: 0;
+}
+.info-value>ul>li{
+list-style: none;
+display: inline;
+margin-right: 124px;
+}
+.info-repo-title{
+    margin-bottom: 16px;
 }
