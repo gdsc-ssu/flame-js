@@ -49,26 +49,30 @@ async function renderRepos(reposUrl) {
 
 async function renderCard(user) {
   const reposHTML = await renderRepos(user.repos_url);
-  const cardHTML = `
-    <div class="profile-card">
+  const cardInnerHTML = `
       <img class="profile-img" src="${user.avatar_url}" />
       <div class="profile-info">
         <h2>${user.name}</h2>
         <p class="profile-info-bio">${user.bio ? user.bio : "(no bio)"}</p>
         <div class="profile-info-detail">
-          <span class="number">${user.followers}</span>
-          <span class="label">Followers</span>
-          <span class="number">${user.following}</span>
-          <span class="label">Following</span>
-          <span class="number">${user.public_repos}</span>
-          <span class="label">Repos</span>
+          <div class="detail-box">
+            <span class="number">${user.followers}</span>
+            <span class="label">Followers</span>
+          </div>
+          <div class="detail-box">
+            <span class="number">${user.following}</span>
+            <span class="label">Following</span>
+          </div>
+          <div class="detail-box">
+            <span class="number">${user.public_repos}</span>
+            <span class="label">Repos</span>
+          </div>
         </div>
         ${reposHTML}
       </div>
-    </div>
   `;
 
-  document.querySelector("#profile-card-wrap").innerHTML = cardHTML;
+  document.querySelector("#profile-card").innerHTML = cardInnerHTML;
 }
 
 async function searchUser() {
