@@ -28,7 +28,6 @@ async function submitHandler(e){
 
 //화면에 result 보여주기.
 function showProfile(user,repos){
-    console.log(user,repos);
     result.innerHTML = '';
     result.innerHTML = `
         <img src=${user.avatar_url} />
@@ -40,7 +39,7 @@ function showProfile(user,repos){
                 <p>${user.following} followings</p>
                 <p>${user.public_repos} repos</P>
             </div>
-            <p>Repos</p>
+            <p id='repo-label'>Repos</p>
             <div id='repos'>
                 ${repos.map(repo=>{
                     return `<p>${repo.name}</p>`

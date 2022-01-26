@@ -11,34 +11,42 @@ const popupContent = document.querySelector('.popup-content');
 searchBtn.addEventListener('click',showSearch);
 mealContainer.addEventListener('click', showPopup);
 
+//랜덤 데이터 get
+async function getRandomMeal() {
+    const resp = await fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+    const data = await resp.json();
+    return data.meals;
+}
 //검색 데이터 처리 get
 async function getSearchMeal(text) {
     const resp = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${text}`);
     const data = await resp.json();
     return data.meals;
 }
-//랜덤 데이터 get
-async function getRandomMeal() {
-    const resp = await fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-    const data = await resp.json();
-    return data.meals[0];
-}
 
 //랜덤 결과 보여주기
 async function showRandom(){
     const randRes = await getRandomMeal();
-    drawMealInfo(randRes,true);
+    const cards = [];
+    randRes.forEach(res=> {
+        const card = drawMealCard(res,true);
+        cards.push(card)
+        mealContainer.appendChild(cards);
+    });
 }
+
 //검색 결과 보여주기
 async function showSearch(){
     const text = searchInput.value;
     const searchRes = await getSearchMeal(text);
     mealContainer.innerHTML='';
-    searchRes.map(res=> drawMealInfo(res,false));
+    searchRes.forEach(res=>{
+        const card = drawMealCard(res,false)
+    });
 }
 
 //Meal 카드 그리기 
-function drawMealInfo(meal,isRandom) {
+function drawMealCard(meal,isRandom) {
     const content = document.createElement('div');
     content.innerHTML = `
         ${isRandom ? `<div class="rand-label">Random Recipe</div>` : ''}
@@ -54,7 +62,7 @@ function drawMealInfo(meal,isRandom) {
     `
     mealContainer.appendChild(content);
     //좋아요 버튼 토글 처리 
-    setFavIcon(Boolean(localStorage.getItem(meal)));
+    setFavIcon(Boolean(localStorage.getItem(meal.strMeal)));
     const favBtn = document.querySelector('#fav-btn');
     favBtn.addEventListener('click',()=>favIconToggle(meal));
     //팝업 처리

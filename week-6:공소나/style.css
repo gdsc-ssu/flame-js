@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body{
@@ -27,10 +28,10 @@ body{
 #result {
     margin:30px;
     padding:20px;
-    width:50vw;
-    background-color: #fff;
+    max-width:50vw;
+    background-color: rgb(243, 243, 243);
     border-radius: 5px;
-    display: flex;  
+    display: flex; 
 }
 
 #info{
@@ -52,11 +53,16 @@ body{
 }
 
 #result img{
-    width:150px;
-    height:150px;
-    border-radius: 75px;
+    width:180px;
+    height:180px;
+    border-radius: 90px;
+    margin-top:10px;
 }
 
+#repo-label{
+    margin:5px auto;
+    font-weight: 600;
+}
 #repos {
     max-width: 100%;
     overflow: auto;
@@ -65,12 +71,12 @@ body{
 }
 
 #repos p{
-    background-color: #e4e4e4;
-    margin-right:15px;
-    margin-bottom: 15px;
+    background-color: #c781c7;
+    margin: 10px 15px 0px 0px;
     border-radius: 3px;
-    height:30px;
-    line-height: 30px;
+    padding:7px;
+    color:#fff;
+    font-size:0.9rem;
 }
 
 
