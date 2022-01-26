@@ -1,0 +1,75 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(56, 31, 122);
+    margin:0;
+    padding : 0;
+    color: white;
+}
+.github-profile-search-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.github-profile-search{
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-bar-section{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rebeccapurple;
+    border-radius: 24px;
+    align-items: start;
+    flex:4;
+    padding:64px;
+    box-sizing: border-box;
+}
+.profile-img-wrapper{
+    flex: 1;
+}
+.img-wrapper{
+    width: 156px;
+    height: 156px;
+}   
+
+.img-wrapper>img{
+    border-radius: 50%;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* ------------------*/
+.profile-info-wrapper{
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    flex:3
+}
+
+
+.info-name{
+    font-size: 24pt;
+    font-weight: 700;
+}
+.info-introduce{
+    font-size: 15pt;
+}
