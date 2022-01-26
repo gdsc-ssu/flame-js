@@ -8,6 +8,10 @@ html {
   box-sizing: inherit;
 }
 
+p {
+  margin: 0;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -16,6 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: gray;
+  margin: 0;
 }
 
 header {
@@ -47,12 +52,25 @@ main {
   margin-top: 20px;
 }
 
-.profile-box {
+.profile-container {
   display: flex;
   width: 600px;
   height: 400px;
   padding: 16px;
   background-color: lightgray;
+  border-radius: 8px;
+  overflow-y: scroll;
+}
+
+.profile-container::-webkit-scrollbar {
+  width: 7px;
+  background-color: whitesmoke;
+  border-radius: 0 8px 8px 0;
+}
+
+.profile-container::-webkit-scrollbar-thumb {
+  background-color: slategrey;
+  border-radius: 0 8px 8px 0;
 }
 
 .profile-img {
@@ -64,6 +82,7 @@ main {
 .profile-img__real {
   width: 120px;
   height: 120px;
+  border-radius: 50%;
 }
 
 .profile-info {
@@ -74,12 +93,10 @@ main {
 .profile-info__name {
   font-size: 24px;
   font-weight: bold;
-  margin: 0;
   padding: 10px 0;
 }
 
 .profile-info__bio {
-  margin: 0;
   padding: 10px 0;
 }
 
@@ -95,4 +112,17 @@ main {
 
 .profile-info__numbers > div > span {
   font-weight: bold;
+}
+
+.profile-info__repos {
+  padding: 10px 0;
+}
+
+.profile-info__repos-box > ul {
+  margin: 0;
+  padding-top: 5px;
+}
+
+.profile-info__repos-box > ul > li {
+  padding-bottom: 3px;
 }
