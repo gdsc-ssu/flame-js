@@ -1,0 +1,107 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+section{
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+}
+.easel{
+    width: 100%;
+    height: auto;
+}
+.canvas-div{
+    width: 18%;
+    height: 43%;
+    margin-left: 19px;
+    margin-bottom: 131px;
+    position: relative;
+}
+.canvas-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+canvas {
+    background-color:white;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.palette{
+    left: 0;
+    height: 100%;
+    width: 150px;
+    margin-left: 25px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing:border-box;
+    z-index: 10;
+}
+.palette-color-wrapper{
+    height: 340px;
+    margin: 0 10px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 8px;
+    
+}
+.color-el{
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+.size-el{
+    cursor: pointer;
+    margin:0 auto;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    background-color: black;
+}
+.small{
+    margin-top:32px;
+    width: 15px;
+    height: 15px;
+}
+.middle{
+    width: 20px;
+    height: 20px;
+}
+.large{
+    margin-bottom:8px;
+    width: 28px;
+    height: 28px;
+}
+.black{
+    background-color: black;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}.white{
+    background-color: white;
+    border: 1px solid black;
+}
