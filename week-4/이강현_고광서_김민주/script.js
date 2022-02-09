@@ -9,6 +9,7 @@ const saveLocalData = (key, value) => {
   localStorage.setItem(key, toJson);
 };
 
+
 // 상태값
 let favList = callLocalData('favList') || [];
 
@@ -18,6 +19,7 @@ const getSearchData = async (text) => {
   const res = await fetch(
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${text}`
   );
+
   const results = await res.json();
   return results;
 };
