@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(255, 247, 226);
+}
+
+body {
+  width: 350px;
+  height: 550px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.mobile-container {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 17px 0px rgba(181, 181, 181, 1);
+  border-radius: 5px;
+  padding: 25px 0px;
+}
+
+/* Input Part  */
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+#search-input {
+  border: 0;
+  border-radius: 3px;
+  background-color: rgb(241, 241, 241);
+  height: 25px;
+  width: 200px;
+  padding-left: 7px;
+  outline: none;
+}
+
+button {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  margin-left: 3px;
+}
+
+/* Favorite Part  */
+.fav-container {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 180px;
+  background-color: rgb(243, 223, 248);;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fav-meals{
+  width:100%;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  margin:0;
+  padding:0;
+  padding-left:10px;
+  overflow-x: auto;
+}
+
+.fav-meals > li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right:10px;
+}
+
+.fav-img> img{
+  width:60px;
+  height:60px;
+  border-radius: 60px;
+}
+.fav-info{
+  font-size:0.8rem;
+  width:80px;
+  text-align: center;
+}
+/* Meal Part - Random & Search Result */
+.meal-container {
+  width: 85%;
+  height: 250px;
+  margin: 10px 0px;
+  position: relative;
+  box-shadow: 0px 0px 17px 0px rgba(181, 181, 181, 1);
+  border-radius: 5px;
+}
+.rand-label {
+  position: absolute;
+  top: 20px;
+  background-color: rgb(255, 255, 255, 0.85);
+  border-radius: 0px 3px 3px 0px;
+  padding: 7px;
+}
+.meal-img {
+  height: 200px;
+}
+.meal-img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /*사이즈 자동으로 맞춰주는데, IE지원 X */
+  border-radius: 5px 5px 0px 0px;
+}
+.meal-info {
+  height: 50px;
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+}
+.meal-name > span {
+  font-size: 1em;
+  font-weight: 600;
+  display: inline-block;
+  width: 80%;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.meal-name{
+  flex:3;
+}
+#fav-btn{
+  flex:1;
+  font-size:0.9rem;
+}
+#fav-btn > i{
+  font-size: 20px;
+}
+
+/* Popup Part  */
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.popup-content {
+  background: #fff;
+  width: 45%;
+  height: 90%;
+  margin: 50px auto;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.recipe-info {
+  width: 90%;
+  margin: 10px 25px;
+}
+.recipe-img > img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+.recipe-info > h1 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+
+.hidden {
+  display: none;
+}
