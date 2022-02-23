@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make Password</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <p class="pwd">Password</p>
+      <form class="pwd-form">
+        <div class="pwd-form__control">
+          <label for="pwd-length">Password Length</label>
+          <input type="text" name="pwd-length" id="pwd-length" value="10" />
+        </div>
+        <div class="pwd-form__control">
+          <label for="lower-letter">Include Upper Letter</label>
+          <input type="checkbox" name="lower-letter" id="pwd-lower-letter" checked />
+        </div>
+        <div class="pwd-form__control">
+          <label for="">Include Lower Letter</label>
+          <input type="checkbox" name="upper-letter" id="pwd-upper-letter" checked />
+        </div>
+        <div class="pwd-form__control">
+          <label for="number">Include Number</label>
+          <input type="checkbox" name="number" id="pwd-number" checked />
+        </div>
+        <div class="pwd-form__control">
+          <label for="symbol">Include Symbol</label>
+          <input type="checkbox" name="symbol" id="pwd-symbol" checked />
+        </div>
+        <button class="pwd-form__btn">make</button>
+      </form>
+    </main>
+  </body>
+  <script type="module" src="./src/main.js"></script>
+</html>

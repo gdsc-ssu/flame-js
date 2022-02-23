@@ -1,0 +1,41 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.pwd {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.pwd-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pwd-form__control {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
