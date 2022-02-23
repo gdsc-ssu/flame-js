@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <title>강현이의 그림판</title>
+  </head>
+  <script type="module" src="./src/main.js"></script>
+  <body>
+    <div id="app">
+      <canvas id="canvas"></canvas>
+      <div class="option">
+        <div class="color-picker">
+          <span>색상 선택: </span>
+          <input type="color" class="color-picker__colors" />
+        </div>
+        <div class="lineWidth-picker">
+          <span>붓(지우개) 사이즈: </span>
+          <input type="text" value="1" class="lineWidth-picker__width" />
+        </div>
+        <button class="eraser">지우개</button>
+      </div>
+    </div>
+  </body>
+</html>

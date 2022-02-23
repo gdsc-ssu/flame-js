@@ -1,4 +1,5 @@
 // localStorage를 위한 두 가지 func
+
 const callLocalData = (key) => {
   const savedData = localStorage.getItem(key);
   return JSON.parse(savedData);
@@ -8,7 +9,6 @@ const saveLocalData = (key, value) => {
   const toJson = JSON.stringify(value);
   localStorage.setItem(key, toJson);
 };
-
 
 // 상태값
 let favList = callLocalData('favList') || [];
@@ -216,6 +216,7 @@ const $searchInput = document.querySelector('.search-input');
 const $searchBtn = document.querySelector('.search-button');
 
 const onSearch = async () => {
+
   const searchText = $searchInput.value;
   const searchResult = await getSearchData(searchText);
 
